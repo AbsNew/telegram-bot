@@ -4,8 +4,8 @@ from telegram import Update, ChatAction, InlineKeyboardButton, InlineKeyboardMar
 from telegram.ext import Updater, MessageHandler, Filters, CallbackContext, CommandHandler
 
 # إعداد
-BOT_TOKEN = 'YOUR_BOT_TOKEN'
-ADMIN_ID = 123456789  # ← استبدله بمعرفك
+TOKEN = os.getenv("BOT_TOKEN")
+DEVELOPER_ID = int(os.getenv("DEV_ID"))
 
 DOWNLOAD_FOLDER = "downloads"
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
